@@ -1,0 +1,1620 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Simba Cement Kenya</title>
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<!-- GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+rel="stylesheet">
+
+<style>
+
+/* ================= GLOBAL ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff;
+    overflow-x:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:1300px;
+    margin:auto;
+}
+
+/* ================= TOP BAR ================= */
+
+.top-bar{
+    background:#111;
+    color:#fff;
+    padding:10px 0;
+    font-size:14px;
+}
+
+.top-content{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#fff;
+    box-shadow:0 2px 15px rgba(0,0,0,0.08);
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:85px;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:900;
+    color:#111;
+}
+
+.logo span{
+    color:#ffbf00;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#111;
+    font-weight:600;
+}
+
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    color:#111;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:90vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url('https://images.unsplash.com/photo-1504307651254-35680f356dfd')
+    center/cover no-repeat;
+
+    display:flex;
+    align-items:center;
+    color:#fff;
+}
+
+.hero-content h1{
+    font-size:65px;
+    line-height:1.1;
+    margin-bottom:20px;
+    font-weight:900;
+}
+
+.hero-content p{
+    font-size:18px;
+    max-width:600px;
+    line-height:1.7;
+}
+
+/* ================= SERVICES ================= */
+
+.services-section{
+    padding:90px 0;
+    background:#f5f5f5;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-title h2{
+    font-size:46px;
+    font-weight:900;
+    color:#111;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.service-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-5px);
+}
+
+.service-card i{
+    font-size:55px;
+    color:#ffbf00;
+    margin-bottom:20px;
+}
+
+.service-card h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.service-card p{
+    color:#555;
+    line-height:1.7;
+}
+
+/* ================= STATS SECTION ================= */
+
+.stats-section{
+    background:#1f1f1f;
+    padding:90px 20px;
+}
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:70px 40px;
+    max-width:900px;
+    margin:auto;
+}
+
+.stat-card{
+    text-align:center;
+}
+
+.stat-icon{
+    margin-bottom:25px;
+}
+
+.stat-icon i{
+    font-size:72px;
+    color:#ffbf00;
+}
+
+.stat-card h2{
+    font-size:78px;
+    font-weight:900;
+    color:#fff;
+    line-height:1;
+    margin-bottom:18px;
+}
+
+.stat-card p{
+    color:#ffbf00;
+    font-size:22px;
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.4;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products{
+    padding:90px 0;
+}
+
+.products-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+.product-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.product-card:hover{
+    transform:translateY(-5px);
+}
+
+.product-image{
+    position:relative;
+}
+
+.product-image img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+}
+
+/* PRODUCT NAME */
+
+.product-name{
+    position:absolute;
+    top:15px;
+    left:15px;
+    background:rgba(0,0,0,0.75);
+    color:#fff;
+    padding:10px 15px;
+    border-radius:10px;
+    font-weight:700;
+    font-size:15px;
+}
+
+/* BUY BUTTON */
+
+.buy-btn{
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    right:15px;
+    background:linear-gradient(135deg,#ffbf00,#ff9d00);
+    color:#111;
+    border:none;
+    border-radius:12px;
+    padding:14px 18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-weight:800;
+    cursor:pointer;
+    box-shadow:0 6px 18px rgba(0,0,0,0.25);
+    transition:0.3s;
+}
+
+.buy-btn:hover{
+    background:#111;
+    color:#fff;
+}
+
+/* PRODUCT DESCRIPTION */
+
+.product-description{
+    padding:20px;
+}
+
+.product-description p{
+    color:#555;
+    font-size:15px;
+    line-height:1.7;
+    font-weight:500;
+}
+
+/* ================= CART MODAL ================= */
+
+.modal{
+    display:none;
+    position:fixed;
+    z-index:2000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.6);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.modal-content{
+    background:#fff;
+    width:100%;
+    max-width:420px;
+    border-radius:18px;
+    padding:30px;
+    animation:popup 0.3s ease;
+}
+
+@keyframes popup{
+    from{
+        transform:scale(0.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.modal-content h2{
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.cart-product{
+    background:#f5f5f5;
+    padding:20px;
+    border-radius:14px;
+    margin-bottom:20px;
+}
+
+.cart-product h3{
+    margin-bottom:10px;
+}
+
+.quantity-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    margin-top:20px;
+}
+
+.quantity-btn{
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:#111;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.quantity-number{
+    font-size:22px;
+    font-weight:800;
+}
+
+.total-box{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.total-box h3{
+    font-size:30px;
+    color:#111;
+}
+
+.modal-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.modal-buttons button,
+.modal-buttons a{
+    flex:1;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    font-weight:700;
+    cursor:pointer;
+    text-decoration:none;
+    text-align:center;
+}
+
+.cancel-btn{
+    background:#ddd;
+    color:#111;
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:#fff;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+
+.floating-whatsapp{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:36px;
+    text-decoration:none;
+    box-shadow:0 8px 25px rgba(0,0,0,0.25);
+    z-index:3000;
+    transition:0.3s;
+}
+
+.floating-whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* CALL BUTTON ABOVE WHATSAPP */
+
+.floating-call{
+    position:fixed;
+    bottom:105px;
+    right:25px;
+    width:58px;
+    height:58px;
+    background:#111;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:24px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.25);
+    z-index:3000;
+    transition:0.3s;
+}
+
+.floating-call:hover{
+    background:#ffbf00;
+    color:#111;
+    transform:scale(1.1);
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+    .service-grid,
+    .products-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:60px 20px;
+    }
+
+    .stat-icon i{
+        font-size:60px;
+    }
+
+    .stat-card h2{
+        font-size:62px;
+    }
+
+    .stat-card p{
+        font-size:18px;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:85px;
+        left:0;
+        width:100%;
+        background:#fff;
+        flex-direction:column;
+        padding:20px;
+        box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .floating-whatsapp{
+        width:60px;
+        height:60px;
+        font-size:34px;
+        bottom:20px;
+        right:20px;
+    }
+
+    .floating-call{
+        width:55px;
+        height:55px;
+        font-size:22px;
+        bottom:90px;
+        right:22px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+
+<div class="top-bar">
+
+<div class="container top-content">
+
+<span>📍 Simba Cement Kenya</span>
+
+<span>📞 0751 395 460</span>
+
+</div>
+
+</div>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container navbar">
+
+<div class="logo">
+SIMBA <span>CEMENT</span>
+</div>
+
+<div class="nav-links" id="navLinks">
+
+<a href="#">Home</a>
+<a href="#products">Products</a>
+<a href="#services">Services</a>
+<a href="#stats">Stats</a>
+
+
+</a>
+
+</div>
+
+<div class="menu-btn" id="menuBtn">
+<i class="fas fa-bars"></i>
+</div>
+
+</div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container hero-content">
+
+<h1>
+Reliable Cement Supply in Kenya
+</h1>
+
+<p>
+Quality construction materials at affordable prices.
+Fast delivery across Kenya with trusted customer support.
+</p>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services-section" id="services">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Our Services</h2>
+</div>
+
+<div class="service-grid">
+
+<div class="service-card">
+
+<i class="fa-solid fa-truck"></i>
+
+<h3>Nationwide Delivery</h3>
+
+<p>
+Fast and secure delivery across all counties in Kenya.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-building"></i>
+
+<h3>Bulk Supply</h3>
+
+<p>
+Affordable bulk cement supply for projects of any size.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h3>Trusted Quality</h3>
+
+<p>
+Premium quality construction materials trusted nationwide.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats-section" id="stats">
+
+<div class="container">
+
+<div class="stats-grid">
+
+<div class="stat-card">
+
+<div class="stat-icon">
+<i class="fa-solid fa-house"></i>
+</div>
+
+<h2>789</h2>
+
+<p>TOTAL PROJECTS</p>
+
+</div>
+
+<div class="stat-card">
+
+<div class="stat-icon">
+<i class="fa-solid fa-user-helmet-safety"></i>
+</div>
+
+<h2>1147</h2>
+
+<p>STAFF MEMBERS</p>
+
+</div>
+
+<div class="stat-card">
+
+<div class="stat-icon">
+<i class="fa-regular fa-clock"></i>
+</div>
+
+<h2>4000</h2>
+
+<p>HOURS OF WORK</p>
+
+</div>
+
+<div class="stat-card">
+
+<div class="stat-icon">
+<i class="fa-solid fa-globe"></i>
+</div>
+
+<h2>4</h2>
+
+<p>COUNTRIES EXPERIENCE</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Our Products</h2>
+</div>
+
+<div class="products-grid">
+
+<!-- PRODUCT 1 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<div class="product-name">
+SIMBA CEMENT 32.5N
+</div>
+
+<img src="simba1.jfif">
+
+<button class="buy-btn"
+onclick="openCart('SIMBA CEMENT 32.5R',750)">
+
+<span>KES 550</span>
+
+<i class="fas fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+<div class="product-description">
+
+<p>
+.Faster drying and settling time<br>
+.Greater comprehensive strength<br>
+.Better coverage comparatively<br>
+.UNBS certified<br>
+.Suitable for all general purpose applications<br>
+.No breakage or spillage due to eco-friendly packing<br>
+.High grade of fineness
+</p>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 2 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<div class="product-name">
+SIMBA CEMENT 42.5N
+</div>
+
+<img src="simba2.jfif">
+
+<button class="buy-btn"
+onclick="openCart('SIMBA CEMENT 42.5N',850)">
+
+<span>KES 650</span>
+
+<i class="fas fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+<div class="product-description">
+
+<p>
+.Suitable for specialized constructions<br>
+.Versatile application for bridges, towers, pavements, highways, high-rise towers and more.<br>
+.High supportive strength to the structures<br>
+.Specific international formulation
+</p>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 3 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<div class="product-name">
+Steel Bars D8
+</div>
+
+<img src="d8.jfif">
+
+<button class="buy-btn"
+onclick="openCart('STEEL BARS',1200)">
+
+<span>KES 450</span>
+
+<i class="fas fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+<div class="product-description">
+
+<p>
+.8mm deformed reinforcement bar<br>
+.Perfect for light structural reinforcement<br>
+.and masonry projects
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+HTML
+<!-- ADD THESE 12 PRODUCT CARDS INSIDE .products-grid BELOW THE EXISTING 3 CARDS -->
+
+<!-- PRODUCT 4 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<div class="product-name">
+Steel Bars D10
+</div>
+
+<img src="d8.jfif">
+
+<button class="buy-btn"
+onclick="openCart('Steel Bars D10',650)">
+
+<span>KES 750</span>
+
+<i class="fas fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+<div class="product-description">
+
+<p>
+.10mm high-strength reinforcement bar<br>
+.10mm deformed bar
+.Used in floor slabs<br>
+and medium-duty reinforcement applications.<br>
+.Durable ribbed steel finish
+</p>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 5 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<div class="product-name">
+Steel Bars D12
+</div>
+
+<img src="d8.jfif">
+
+<button class="buy-btn"
+onclick="openCart('Steel Bars D12',850)">
+
+<span>KES 1020</span>
+
+<i class="fas fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+<div class="product-description">
+
+<p>
+.12mm deformed steel bar<br>
+.Versatile for beams, columns,<br>
+.and general concrete reinforcement
+</p>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 6 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<div class="product-name">
+Steel Bars D16
+</div>
+
+<img src="d8.jfif">
+
+<button class="buy-btn"
+onclick="openCart('Steel Bars D16',1200)">
+
+<span>KES 2050</span>
+
+<i class="fas fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+<div class="product-description">
+
+<p>
+.16mm deformed bar<br>
+.Superior tensile strength<br>
+.for heavy structural elements
+</p>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 7 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<div class="product-name">
+Steel Bars D25
+</div>
+
+<img src="d8.jfif">
+
+<button class="buy-btn"
+onclick="openCart('Steel Bars D25',350)">
+
+<span>KES 5750</span>
+
+<i class="fas fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+<div class="product-description">
+
+<p>
+.25mm deformed reinforcement bar<br>
+.For major load-bearing structures<br>
+.and large-scale construction
+</p>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 8 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<div class="product-name">
+Steel Bars R6
+</div>
+
+<img src="r6.jfif">
+
+<button class="buy-btn"
+onclick="openCart('Steel Bars R6',2500)">
+
+<span>KES 210</span>
+
+<i class="fas fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+<div class="product-description">
+
+<p>
+.6mm round steel rod<br>
+.Perfect for ties, binding,<br>
+.and light-duty reinforcement.
+</p>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 9 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<div class="product-name">
+Steel Bars R8
+</div>
+
+<img src="r6.jfif">
+
+<button class="buy-btn"
+onclick="openCart('Steel Bars R8',1800)">
+
+<span>KES 450</span>
+
+<i class="fas fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+<div class="product-description">
+
+<p>
+.8mm round bar<br>
+.For light reinforcement<br>
+.and stirrups
+</p>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 10 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<div class="product-name">
+Steel Bars R10
+</div>
+
+<img src="r6.jfif">
+
+<button class="buy-btn"
+onclick="openCart('Steel Bars R10',65)">
+
+<span>KES 850</span>
+
+<i class="fas fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+<div class="product-description">
+
+<p>
+.10mm round steel rod<br>
+.For minor structural work<br>
+.and tying applications
+</p>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 11 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<div class="product-name">
+Steel Bars R12
+</div>
+
+<img src="r6.jfif">
+
+<button class="buy-btn"
+onclick="openCart('Steel Bars R12',75)">
+
+<span>KES 1350</span>
+
+<i class="fas fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+<div class="product-description">
+
+<p>
+.12mm round bar<br>
+.Ideal for light concrete reinforcement<br>
+.and fabrication needs
+</p>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 12 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<div class="product-name">
+Steel Bars R16
+</div>
+
+<img src="r6.jfif">
+
+<button class="buy-btn"
+onclick="openCart('Steel Bars R16',450)">
+
+<span>KES 2300</span>
+
+<i class="fas fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+<div class="product-description">
+
+<p>
+.16mm round steel bar<br>
+.Used in formwork supports<br>
+.and general-purpose reinforcement
+</p>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 13 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<div class="product-name">
+Paving Blocks/ Cabro
+</div>
+
+<img src="cabros.jfif">
+
+<button class="buy-btn"
+onclick="openCart('Paving Blocks/ Cabro',950)">
+
+<span>KES 900/square</span>
+
+<i class="fas fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+<div class="product-description">
+
+<p>
+.Available sizes include 100mm*200mm, 150mm*150mm, 220mm*110mm<br>
+.Thickness options include 50mm, 60mm, and 80mm<br>
+.for walkways, driveways, and heavy-duty applications respectively
+</p>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 14 -->
+
+<div class="product-card">
+
+<div class="product-image">
+
+<div class="product-name">
+Coloured Paving Blocks/ Cabro
+</div>
+
+<img src="co.jfif">
+
+<button class="buy-btn"
+onclick="openCart('Coloured Paving Blocks/ Cabro',8500)">
+
+<span>KES 8500</span>
+
+<i class="fas fa-cart-shopping"></i>
+
+</button>
+
+</div>
+
+<div class="product-description">
+
+<p>
+.Available sizes include 100mm*200mm, 150mm*150mm, 220mm*110mm<br>
+.Thickness options include 50mm, 60mm, and 80mm<br>
+.for walkways, driveways, and heavy-duty applications respectively.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+<!-- CART MODAL -->
+
+<div class="modal" id="cartModal">
+
+<div class="modal-content">
+
+<h2>Shopping Cart</h2>
+
+<div class="cart-product">
+
+<h3 id="cartProductName">
+Product
+</h3>
+
+<p>
+Price Per Item:
+<strong id="cartPrice">
+KES 0
+</strong>
+</p>
+
+<div class="quantity-box">
+
+<button class="quantity-btn"
+onclick="decreaseQty()">
+-
+</button>
+
+<div class="quantity-number" id="quantity">
+1
+</div>
+
+<button class="quantity-btn"
+onclick="increaseQty()">
++
+</button>
+
+</div>
+
+</div>
+
+<div class="total-box">
+
+<p>Total Price</p>
+
+<h3 id="totalPrice">
+KES 0
+</h3>
+
+</div>
+
+<div class="modal-buttons">
+
+<button class="cancel-btn"
+onclick="closeCart()">
+Cancel
+</button>
+
+<a href="#"
+class="whatsapp-btn"
+id="whatsappBtn">
+Order Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FLOATING CALL BUTTON -->
+
+<a href="tel:+254751395460"
+class="floating-call">
+
+<i class="fas fa-phone"></i>
+
+</a>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+
+<a href="https://wa.me/254751395460"
+class="floating-whatsapp"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<script>
+
+/* MOBILE MENU */
+
+document.getElementById("menuBtn").onclick = () => {
+    document.getElementById("navLinks").classList.toggle("active");
+};
+
+/* CART VARIABLES */
+
+let currentProduct = "";
+let currentPrice = 0;
+let quantity = 1;
+
+/* OPEN CART */
+
+function openCart(product,price){
+
+    currentProduct = product;
+    currentPrice = price;
+    quantity = 1;
+
+    document.getElementById("cartModal").style.display = "flex";
+
+    document.getElementById("cartProductName").innerText = product;
+
+    updateCart();
+
+}
+
+/* UPDATE CART */
+
+function updateCart(){
+
+    document.getElementById("quantity").innerText = quantity;
+
+    document.getElementById("cartPrice").innerText =
+    "KES " + currentPrice;
+
+    let total = currentPrice * quantity;
+
+    document.getElementById("totalPrice").innerText =
+    "KES " + total;
+
+    let message =
+    "Hello Simba Cement,%0A%0A" +
+    "I want to order:%0A" +
+    currentProduct + "%0A" +
+    "Quantity: " + quantity + "%0A" +
+    "Total: KES " + total;
+
+    document.getElementById("whatsappBtn").href =
+    "https://wa.me/254751395460?text=" + message;
+
+}
+
+/* INCREASE */
+
+function increaseQty(){
+
+    quantity++;
+
+    updateCart();
+
+}
+
+/* DECREASE */
+
+function decreaseQty(){
+
+    if(quantity > 1){
+
+        quantity--;
+
+        updateCart();
+
+    }
+
+}
+
+/* CLOSE CART */
+
+function closeCart(){
+
+    document.getElementById("cartModal").style.display = "none";
+
+}
+
+/* CLOSE OUTSIDE */
+
+window.onclick = function(event){
+
+    const modal = document.getElementById("cartModal");
+
+    if(event.target == modal){
+
+        modal.style.display = "none";
+
+    }
+
+}
+
+</script>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- OFFICE -->
+    <div class="footer-box">
+      <h3>OUR OFFICE</h3>
+
+      <p><i class="fas fa-map-marker-alt"></i> Simba Cement, Nakuru, Kenya</p>
+
+      <p><i class="fas fa-phone-alt"></i> (+254) 751-395-460</p>
+
+    
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-box">
+      <h3>QUICK LINKS</h3>
+
+      <ul>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Products</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> About Us</a></li>
+        <li><a href="#"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- BUSINESS HOURS -->
+    <div class="footer-box">
+      <h3>BUSINESS HOURS</h3>
+
+      <div class="hours">
+        <p>MONDAY - FRIDAY</p>
+        <span>09:00 am - 07:00 pm</span>
+      </div>
+
+      <div class="hours">
+        <p>SATURDAY</p>
+        <span>09:00 am - 12:00 pm</span>
+      </div>
+
+      <div class="hours">
+        <p>SUNDAY</p>
+        <span>Closed</span>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+/* FOOTER */
+.footer{
+    background:#23252b;
+    padding:60px 8%;
+    color:#999;
+    font-family:'Poppins',sans-serif;
+}
+
+.footer-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:50px;
+}
+
+.footer-box h3{
+    color:#fff;
+    font-size:18px;
+    margin-bottom:25px;
+    font-weight:700;
+}
+
+.footer-box p{
+    margin:12px 0;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    line-height:1.6;
+}
+
+.footer-box i{
+    color:#f4a825;
+}
+
+.footer-box ul{
+    list-style:none;
+    padding:0;
+}
+
+.footer-box ul li{
+    margin:15px 0;
+}
+
+.footer-box ul li a{
+    text-decoration:none;
+    color:#999;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.footer-box ul li a:hover{
+    color:#fff;
+    padding-left:5px;
+}
+
+.footer-box ul li i{
+    margin-right:10px;
+}
+
+.social-icons{
+    display:flex;
+    gap:12px;
+    margin-top:25px;
+}
+
+.social-icons a{
+    width:42px;
+    height:42px;
+    background:#fff;
+    color:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.social-icons a:hover{
+    background:#f4a825;
+    color:#fff;
+}
+
+.hours{
+    margin-bottom:20px;
+}
+
+.hours p{
+    color:#888;
+    font-weight:600;
+    margin-bottom:5px;
+}
+
+.hours span{
+    font-size:14px;
+    color:#777;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .footer{
+        padding:50px 6%;
+    }
+
+    .footer-container{
+        gap:35px;
+    }
+}
+</style>
+</body>
+</html>
